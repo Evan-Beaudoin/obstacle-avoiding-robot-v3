@@ -68,6 +68,7 @@ basic.forever(function () {
         strip.clear()
         strip.show()
         strip.showColor(neopixel.colors(NeoPixelColors.Red))
+        music.playTone(131, music.beat(BeatFraction.Whole))
         basic.pause(200)
         scan_left()
         basic.pause(1000)
