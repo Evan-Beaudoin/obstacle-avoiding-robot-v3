@@ -4,7 +4,8 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "robotbit": "github:kittenbot/pxt-robotbit#v0.3.6"
+        "robotbit": "github:kittenbot/pxt-robotbit#v0.3.6",
+        "pxt-sonar": "github:microsoft/pxt-sonar#v0.0.5"
     },
     "files": [
         "main.blocks",
