@@ -18,7 +18,7 @@ function turn_left () {
         robotbit.Motors.M2A,
         255
         )
-        basic.pause(375)
+        basic.pause(400)
         turn_left_value = 0
     }
     robotbit.MotorStopAll()
@@ -40,7 +40,7 @@ function turn_right () {
         robotbit.Motors.M2A,
         -255
         )
-        basic.pause(375)
+        basic.pause(400)
         turn_right_value = 0
     }
     robotbit.MotorStopAll()
@@ -59,6 +59,13 @@ let M2_SPEED = 255
 let strip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
 strip.clear()
 strip.show()
+basic.forever(function () {
+    distance = sonar.ping(
+    DigitalPin.P1,
+    DigitalPin.P2,
+    PingUnit.Centimeters
+    )
+})
 basic.forever(function () {
     straighten_out()
     basic.pause(500)
@@ -102,11 +109,4 @@ basic.forever(function () {
         M2_SPEED
         )
     }
-})
-basic.forever(function () {
-    distance = sonar.ping(
-    DigitalPin.P1,
-    DigitalPin.P2,
-    PingUnit.Centimeters
-    )
 })
